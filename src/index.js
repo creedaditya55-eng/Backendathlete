@@ -25,11 +25,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/athletes', athleteRoutes);
 
 // Serve static build from the top-level `client/dist` directory
-app.use(express.static(path.join(__dirname, "../client/dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-});
 
 
 app.get('/', (req, res) => {
